@@ -1092,6 +1092,37 @@ p  { color: var(--gray-600); }
 }
 
 /* =============================================
+   TOAST NOTIFICATION
+   ============================================= */
+
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(16px);
+  padding: 16px 28px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--black);
+  border-left: 3px solid var(--green);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+  white-space: nowrap;
+}
+
+.toast--error {
+  border-left-color: #c0392b;
+}
+
+.toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* =============================================
    ANIMATIONS
    ============================================= */
 
