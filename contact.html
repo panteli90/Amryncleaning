@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Get a Quote — Amryn Cleaning Services</title>
+  <meta name="description" content="Get a free, no-obligation quote for commercial cleaning. Contact Amryn Cleaning Services today." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .contact-page {
+      padding: 80px 24px;
+    }
+
+    .contact-page__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-page__left h1 {
+      margin-bottom: 20px;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+    }
+
+    .contact-page__left > p {
+      color: #666;
+      margin-bottom: 48px;
+      line-height: 1.75;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .contact-hours {
+      margin-top: 48px;
+      padding: 32px;
+      background: #f5f5f5;
+      border-radius: 6px;
+    }
+
+    .contact-hours h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 0.9rem;
+    }
+
+    .hours-row:last-child {
+      border-bottom: none;
+    }
+
+    .hours-row span:first-child {
+      font-weight: 600;
+      color: #111;
+    }
+
+    .hours-row span:last-child {
+      color: #666;
+    }
+
+    .form-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 48px;
+    }
+
+    .form-card h2 {
+      margin-bottom: 8px;
+      font-size: 1.5rem;
+    }
+
+    .form-card > p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 900px) {
+      .contact-page__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .form-card {
+        padding: 32px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Amryn <span>Cleaning</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav__cta">Get a Quote</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html">Get a Quote</a>
+    </div>
+  </nav>
+
+  <!-- CONTACT PAGE -->
+  <section class="contact-page">
+    <div class="contact-page__inner">
+
+      <!-- LEFT — Info -->
+      <div class="fade-up">
+        <span class="section-label">Get in Touch</span>
+        <h1>Let's Talk About Your Site</h1>
+        <p>
+          Fill in the form and we'll get back to you within 24 hours with a clear, no-obligation quote. Prefer to speak directly? Give us a call or drop us an email.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.1a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-detail__text">
+              <strong>Phone</strong>
+              <span><a href="tel:+441234567890" style="color: inherit;">+44 (0) 1234 567890</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contact-detail__text">
+              <strong>Email</strong>
+              <span><a href="mailto:info@amryncleaning.co.uk" style="color: inherit;">info@amryncleaning.co.uk</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-detail__text">
+              <strong>Based In</strong>
+              <span>Serving businesses across the region</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-hours">
+          <h3>Office Hours</h3>
+          <div class="hours-row">
+            <span>Monday – Friday</span>
+            <span>8:00am – 6:00pm</span>
+          </div>
+          <div class="hours-row">
+            <span>Saturday</span>
+            <span>9:00am – 1:00pm</span>
+          </div>
+          <div class="hours-row">
+            <span>Sunday</span>
+            <span>Closed</span>
+          </div>
+          <p style="font-size: 0.8rem; color: #aaa; margin-top: 16px;">Cleaning services are available 7 days a week, including early mornings and evenings.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT — Form -->
+      <div class="form-card fade-up">
+        <h2>Get a Free Quote</h2>
+        <p>No obligation. No sales calls. Just a clear price sent directly to your inbox.</p>
+
+        <form class="form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first_name">First Name *</label>
+              <input type="text" id="first_name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last Name *</label>
+              <input type="text" id="last_name" placeholder="Smith" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company_name">Company Name</label>
+            <input type="text" id="company_name" placeholder="Your Business Ltd" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email_addr">Email Address *</label>
+              <input type="email" id="email_addr" placeholder="john@business.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone_num">Phone Number</label>
+              <input type="tel" id="phone_num" placeholder="+44 7700 000000" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service_type">Service Required *</label>
+            <select id="service_type" required>
+              <option value="">Select a service...</option>
+              <option>Office Cleaning</option>
+              <option>Retail / Commercial Cleaning</option>
+              <option>Supermarket Cleaning</option>
+              <option>Bank / Financial Premises</option>
+              <option>Janitorial Contract</option>
+              <option>Building Site Clean</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="site_size">Approximate Site Size</label>
+            <select id="site_size">
+              <option value="">Select size...</option>
+              <option>Under 500 sq ft</option>
+              <option>500 – 2,000 sq ft</option>
+              <option>2,000 – 5,000 sq ft</option>
+              <option>5,000 – 20,000 sq ft</option>
+              <option>Over 20,000 sq ft</option>
+              <option>Multiple sites</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="frequency">Cleaning Frequency</label>
+            <select id="frequency">
+              <option value="">Select frequency...</option>
+              <option>Daily</option>
+              <option>Weekdays only</option>
+              <option>3x per week</option>
+              <option>Weekly</option>
+              <option>Fortnightly</option>
+              <option>One-off</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="details">Tell us more about your requirements</label>
+            <textarea id="details" placeholder="Describe the site, any specific requirements, preferred times, or anything else useful..."></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Send Enquiry</button>
+          </div>
+          <p class="form-note">We'll respond within 24 hours. Your details won't be shared with any third parties.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">Amryn <span>Cleaning</span></div>
+          <p>Professional commercial cleaning services for offices, retail, and commercial properties. Reliable. Consistent. Done right.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#office">Office Cleaning</a></li>
+            <li><a href="services.html#retail">Retail Cleaning</a></li>
+            <li><a href="services.html#janitorial">Janitorial Contracts</a></li>
+            <li><a href="services.html#commercial">Commercial Sites</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+441234567890">+44 (0) 1234 567890</a></li>
+            <li><a href="mailto:info@amryncleaning.co.uk">info@amryncleaning.co.uk</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Amryn Cleaning Services. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
