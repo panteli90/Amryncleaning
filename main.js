@@ -53,7 +53,7 @@ function showToast(message, type) {
 }
 
 // --- Contact Form ---
-const WEBHOOK_URL = 'https://hook.us2.make.com/o7a5xu3g9glbfgof3wkuxwjwj8rs1rpe';
+const WEBHOOK_URL = 'https://hook.us2.make.com/6reiqoh4boxtxijk7xppqe0m34hbr9wo';
 
 const forms = document.querySelectorAll('.form');
 forms.forEach(form => {
