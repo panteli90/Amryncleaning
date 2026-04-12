@@ -53,7 +53,43 @@ function showToast(message, type) {
 }
 
 // --- Contact Form ---
-const WEBHOOK_URL = 'https://hook.us2.make.com/6reiqoh4boxtxijk7xppqe0m34hbr9wo';
+const WEBHOOK_HOMEPAGE = 'https://hook.us2.make.com/6reiqoh4boxtxijk7xppqe0m34hbr9wo';
+const WEBHOOK_CONTACT  = 'https://hook.us2.make.com/kpnfti0ue5wfu7vgbttk3e6ve4lkksjf';
+
+function val(form, id) {
+  return (form.querySelector('#' + id) || {}).value || '';
+}
+
+function buildPayload(form) {
+  // Full contact-page form (contact.html)
+  if (form.querySelector('#first_name')) {
+    return {
+      url: WEBHOOK_CONTACT,
+      payload: {
+        firstName:    val(form, 'first_name'),
+        lastName:     val(form, 'last_name'),
+        company:      val(form, 'company_name'),
+        email:        val(form, 'email_addr'),
+        phone:        val(form, 'phone_num'),
+        service:      val(form, 'service_type'),
+        siteSize:     val(form, 'site_size'),
+        frequency:    val(form, 'frequency'),
+        requirements: val(form, 'details'),
+      },
+    };
+  }
+
+  // Homepage quick-quote form (index.html)
+  return {
+    url: WEBHOOK_HOMEPAGE,
+    payload: {
+      businessName:  val(form, 'company'),
+      contactPerson: (val(form, 'fname') + ' ' + val(form, 'lname')).trim(),
+      email:         val(form, 'email'),
+      phone:         val(form, 'phone'),
+    },
+  };
+}
 
 const forms = document.querySelectorAll('.form');
 forms.forEach(form => {
@@ -65,18 +101,10 @@ forms.forEach(form => {
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
-    const fname = (form.querySelector('#fname') || {}).value || '';
-    const lname = (form.querySelector('#lname') || {}).value || '';
-
-    const payload = {
-      businessName:   (form.querySelector('#company') || {}).value || '',
-      contactPerson:  (fname + ' ' + lname).trim(),
-      email:          (form.querySelector('#email') || {}).value || '',
-      phone:          (form.querySelector('#phone') || {}).value || '',
-    };
+    const { url, payload } = buildPayload(form);
 
     try {
-      const res = await fetch(WEBHOOK_URL, {
+      const res = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
