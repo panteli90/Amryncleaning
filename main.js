@@ -106,7 +106,7 @@ forms.forEach(form => {
     try {
       const res = await fetch(url, {
         method: 'POST',
-        body: JSON.stringify(payload),
+        body: new URLSearchParams(payload),
       });
 
 
