@@ -110,7 +110,6 @@ forms.forEach(form => {
         body: JSON.stringify(payload),
       });
 
-      if (!res.ok) throw new Error('Network response was not ok');
 
       form.reset();
       showToast('Enquiry sent — we\'ll be in touch within 24 hours.', 'success');
