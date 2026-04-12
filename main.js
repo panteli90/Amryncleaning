@@ -106,7 +106,6 @@ forms.forEach(form => {
     try {
       const res = await fetch(url, {
         method: 'POST',
-        mode: 'no-cors',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(payload),
       });
