@@ -53,7 +53,7 @@ function showToast(message, type) {
 }
 
 // --- Contact Form ---
-const WEBHOOK_HOMEPAGE = 'https://hook.us2.make.com/6reiqoh4boxtxijk7xppqe0m34hbr9wo';
+const WEBHOOK_HOMEPAGE = 'https://hooks.zapier.com/hooks/catch/27185988/u7l6it4/';
 const WEBHOOK_CONTACT  = 'https://hooks.zapier.com/hooks/catch/27185988/u7l6it4/';
 
 function val(form, id) {
