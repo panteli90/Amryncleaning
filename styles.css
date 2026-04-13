@@ -199,9 +199,6 @@ p  { color: var(--gray-600); }
 
 .nav__logo span {
   color: #1D9E75;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  font-size: 13px;
 }
 
 .nav__links {
