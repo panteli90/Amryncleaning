@@ -123,13 +123,13 @@ p  { color: var(--gray-600); }
 }
 
 .btn-primary {
-  background: var(--black);
+  background: #1D9E75;
   color: var(--white);
 }
 
 .btn-primary:hover {
-  background: #333333;
-  border-color: #333333;
+  background: #166d52;
+  border-color: #166d52;
 }
 
 .btn-outline {
@@ -1108,7 +1108,7 @@ p  { color: var(--gray-600); }
   display: block;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--gray-400);
+  color: #1D9E75;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
