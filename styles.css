@@ -334,6 +334,7 @@ p  { color: var(--gray-600); }
 
 /* Top label */
 .hero__label {
+  text-shadow: 0 2px 8px rgba(0,0,0,1);
   display: inline-block;
   font-size: 0.68rem;
   font-weight: 700;
