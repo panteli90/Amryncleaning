@@ -192,13 +192,16 @@ p  { color: var(--gray-600); }
 .nav__logo {
   font-size: 15px;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.02em;
   color: #ffffff;
   text-transform: uppercase;
 }
 
 .nav__logo span {
-  color: #1D9E75;
+  color: rgba(255,255,255,0.6);
+  font-weight: 300;
+  font-size: 13px;
+  letter-spacing: 0.14em;
 }
 
 .nav__links {
@@ -208,8 +211,9 @@ p  { color: var(--gray-600); }
 }
 
 .nav__links a {
-  font-size: 0.875rem;
+  font-size: 14px;
   font-weight: 600;
+  letter-spacing: 0.03em;
   color: rgba(255,255,255,0.8);
   transition: color var(--transition);
 }
@@ -250,15 +254,17 @@ p  { color: var(--gray-600); }
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--black);
+  background: #1D9E75;
   transition: transform 0.3s, opacity 0.3s;
 }
 
 .nav__mobile {
   display: none;
   flex-direction: column;
-  background: var(--white);
-  border-top: 1px solid var(--gray-200);
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.05);
   padding: 24px;
   gap: 20px;
 }
@@ -266,9 +272,14 @@ p  { color: var(--gray-600); }
 .nav__mobile a {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--black);
+  color: rgba(255,255,255,0.8);
   padding: 8px 0;
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: color 0.2s;
+}
+
+.nav__mobile a:hover {
+  color: #1D9E75;
 }
 
 .nav__mobile.open {
@@ -432,13 +443,13 @@ p  { color: var(--gray-600); }
 .hero__btn--outline {
   background: transparent;
   color: #ffffff;
-  border-color: rgba(255,255,255,0.5);
+  border: 1.5px solid rgba(255,255,255,0.7);
+  transition: border-color 0.2s, background 0.2s;
 }
 
 .hero__btn--outline:hover {
-  border-color: rgba(255,255,255,0.85);
+  border-color: #ffffff;
   background: rgba(255,255,255,0.08);
-  opacity: 0.9;
 }
 
 /* Trust strip */
