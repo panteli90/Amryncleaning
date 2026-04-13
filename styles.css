@@ -794,14 +794,8 @@ p  { color: var(--gray-600); }
               box-shadow 0.25s ease-out;
 }
 
-.process-flow__node.is-active {
-  background: rgba(31, 122, 92, 0.08);
-}
-
 .process-flow__node:hover,
-.process-flow__node.is-hovered,
-.process-flow__node.is-active:hover,
-.process-flow__node.is-active.is-hovered {
+.process-flow__node.is-hovered {
   background: var(--green);
   transform: scale(1.12);
   box-shadow: 0 4px 16px rgba(31, 122, 92, 0.3);
@@ -819,9 +813,7 @@ p  { color: var(--gray-600); }
 }
 
 .process-flow__node:hover svg,
-.process-flow__node.is-hovered svg,
-.process-flow__node.is-active:hover svg,
-.process-flow__node.is-active.is-hovered svg {
+.process-flow__node.is-hovered svg {
   stroke: #ffffff;
   fill: none;
 }
