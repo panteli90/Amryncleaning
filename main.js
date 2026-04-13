@@ -22,7 +22,7 @@ if (hamburger && mobileNav) {
 
 // --- Active Nav Link ---
 const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav__links a, .nav__mobile a').forEach(link => {
+document.querySelectorAll('.nav__node-item, .nav__mobile a').forEach(link => {
   const href = link.getAttribute('href');
   if (href === currentPage || (currentPage === '' && href === 'index.html')) {
     link.classList.add('active');
