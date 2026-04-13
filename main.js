@@ -35,6 +35,58 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+// --- Our Process Section ---
+const processSection = document.getElementById('our-process-section');
+
+if (processSection) {
+  const flowNodes = processSection.querySelectorAll('.process-flow__node');
+  const stepCards = processSection.querySelectorAll('.process-item');
+
+  // 1. Spine draw animation on scroll into view
+  const spineObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        spineObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.25 });
+
+  spineObserver.observe(processSection);
+
+  // 2. Icon activation as each step scrolls into view
+  const stepObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const step = entry.target.dataset.step;
+        const node = processSection.querySelector(`.process-flow__node[data-step="${step}"]`);
+        if (node) node.classList.add('is-active');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  stepCards.forEach(card => stepObserver.observe(card));
+
+  // 3. Bidirectional hover: node ↔ card
+  function linkHover(triggerEls, targetSelector) {
+    triggerEls.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        const step = el.dataset.step;
+        const target = processSection.querySelector(`${targetSelector}[data-step="${step}"]`);
+        if (target) target.classList.add('is-hovered');
+      });
+      el.addEventListener('mouseleave', () => {
+        const step = el.dataset.step;
+        const target = processSection.querySelector(`${targetSelector}[data-step="${step}"]`);
+        if (target) target.classList.remove('is-hovered');
+      });
+    });
+  }
+
+  linkHover(flowNodes, '.process-item');   // node hover → highlight card
+  linkHover(stepCards, '.process-flow__node'); // card hover → highlight node
+}
+
 // --- Toast Notification ---
 function showToast(message, type) {
   const existing = document.querySelector('.toast');

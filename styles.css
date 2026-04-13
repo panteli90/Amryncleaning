@@ -520,41 +520,48 @@ p  { color: var(--gray-600); }
    OUR PROCESS
    ============================================= */
 
-.our-process__grid {
-  display: grid;
-  grid-template-columns: 1fr 92px 1fr;
-  align-items: stretch;
+.our-process {
+  background: linear-gradient(to bottom, #ffffff, #f9fafb);
 }
 
-/* Step columns */
+.our-process__grid {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  align-items: stretch;
+  gap: 0 16px;
+}
+
+/* ---- Step columns ---- */
 .process-col {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  padding: 4px 0;
 }
 
 .process-item {
   flex: 1;
-  padding: 32px 40px 32px 0;
-  border-top: 1px solid var(--gray-200);
-  transition: border-color 0.2s;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  transition: transform 0.25s ease-out,
+              box-shadow 0.25s ease-out,
+              border-color 0.25s ease-out;
+  cursor: default;
 }
 
-.process-item:last-child {
-  border-bottom: 1px solid var(--gray-200);
-}
-
-.process-item:hover {
-  border-top-color: var(--green);
-}
-
-.process-col--right .process-item {
-  padding: 32px 0 32px 40px;
+.process-item.is-hovered {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-color: var(--green);
 }
 
 .process-item__num {
   display: block;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--green);
@@ -564,23 +571,25 @@ p  { color: var(--gray-600); }
 .process-item h3 {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--black);
+  color: #111827;
   margin-bottom: 8px;
 }
 
 .process-item p {
   font-size: 0.875rem;
-  line-height: 1.7;
-  color: var(--gray-600);
+  line-height: 1.75;
+  color: #6b7280;
 }
 
-/* Center flow diagram */
+/* ---- Center flow diagram ---- */
 .process-flow {
   display: flex;
   justify-content: center;
+  padding: 4px 0;
 }
 
 .process-flow__track {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -588,60 +597,103 @@ p  { color: var(--gray-600); }
   height: 100%;
 }
 
+/* Animated spine — drawn top→bottom on scroll */
+.process-flow__spine {
+  position: absolute;
+  top: 26px;
+  bottom: 26px;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--green) 0%,
+    var(--green) 70%,
+    rgba(31, 122, 92, 0.2) 100%
+  );
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top center;
+  transition: transform 1s ease-out;
+  z-index: 0;
+}
+
+.our-process.is-visible .process-flow__spine {
+  transform: translateX(-50%) scaleY(1);
+}
+
+/* Nodes */
 .process-flow__node {
-  width: 46px;
-  height: 46px;
-  border: 1.5px solid var(--green);
+  width: 52px;
+  height: 52px;
+  border: 2px solid var(--green);
   border-radius: 50%;
-  background: var(--white);
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-  cursor: default;
+  cursor: pointer;
   position: relative;
   z-index: 1;
+  transition: background 0.25s ease-out,
+              transform 0.25s ease-out,
+              box-shadow 0.25s ease-out;
 }
 
-.process-flow__node:hover {
+.process-flow__node:hover,
+.process-flow__node.is-hovered {
   background: var(--green);
-  transform: scale(1.1);
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px rgba(31, 122, 92, 0.3);
+}
+
+.process-flow__node.is-active {
+  background: rgba(31, 122, 92, 0.08);
 }
 
 .process-flow__node svg {
-  width: 18px;
-  height: 18px;
+  width: 21px;
+  height: 21px;
   stroke: var(--green);
   fill: none;
   stroke-width: 1.75;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: stroke 0.2s ease;
+  transition: stroke 0.25s ease-out;
 }
 
-.process-flow__node:hover svg {
-  stroke: var(--white);
+.process-flow__node:hover svg,
+.process-flow__node.is-hovered svg {
+  stroke: #ffffff;
 }
 
+/* Final node — completion state */
 .process-flow__node--filled {
+  width: 58px;
+  height: 58px;
   background: var(--green);
   border-color: var(--green);
+  box-shadow: 0 4px 20px rgba(31, 122, 92, 0.35);
 }
 
 .process-flow__node--filled svg {
-  stroke: var(--white);
+  width: 23px;
+  height: 23px;
+  stroke: #ffffff;
 }
 
+.process-flow__node--filled:hover,
+.process-flow__node--filled.is-hovered {
+  background: #165e46;
+  border-color: #165e46;
+  transform: scale(1.15);
+  box-shadow: 0 6px 28px rgba(31, 122, 92, 0.45);
+}
+
+/* Line spacers — invisible; spine is the visual line */
 .process-flow__line {
   flex: 1;
-  width: 1px;
+  width: 0;
   min-height: 20px;
-  background: var(--gray-200);
-}
-
-.process-flow__line--accent {
-  background: var(--green);
 }
 
 /* =============================================
@@ -1249,18 +1301,15 @@ p  { color: var(--gray-600); }
 
   .our-process__grid {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .process-flow {
     display: none;
   }
 
-  .process-col--right .process-item {
-    padding: 32px 0 32px 0;
-  }
-
-  .process-item {
-    padding: 32px 0;
+  .process-col {
+    gap: 12px;
   }
 
   .process-steps::before {
