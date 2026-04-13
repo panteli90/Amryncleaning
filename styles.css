@@ -336,9 +336,9 @@ p  { color: var(--gray-600); }
 .hero__label {
   text-shadow: 0 2px 8px rgba(0,0,0,1);
   display: inline-block;
-  font-size: 0.68rem;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--green);
   margin-bottom: 20px;
@@ -485,7 +485,7 @@ p  { color: var(--gray-600); }
 .hero__stat-label {
   display: block;
   font-size: 0.65rem;
-  color: rgba(255,255,255,0.5);
+  color: #1D9E75;
   text-transform: uppercase;
   letter-spacing: 0.09em;
   margin-top: 5px;
