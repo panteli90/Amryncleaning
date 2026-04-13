@@ -775,13 +775,13 @@ p  { color: var(--gray-600); }
 }
 
 
-/* Nodes */
+/* Nodes — all permanently green filled */
 .process-flow__node {
   width: 52px;
   height: 52px;
   border: 2px solid var(--green);
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -789,62 +789,41 @@ p  { color: var(--gray-600); }
   cursor: pointer;
   position: relative;
   z-index: 1;
-  transition: background 0.25s ease-out,
-              transform 0.25s ease-out,
+  transition: transform 0.25s ease-out,
               box-shadow 0.25s ease-out;
 }
 
 .process-flow__node:hover,
 .process-flow__node.is-hovered {
-  background: var(--green);
   transform: scale(1.12);
-  box-shadow: 0 4px 16px rgba(31, 122, 92, 0.3);
+  box-shadow: 0 6px 28px rgba(31, 122, 92, 0.45);
 }
 
 .process-flow__node svg {
   width: 21px;
   height: 21px;
-  stroke: var(--green);
+  stroke: #ffffff;
   fill: none;
   stroke-width: 1.75;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: stroke 0.25s ease-out, fill 0.25s ease-out;
 }
 
-.process-flow__node:hover svg,
-.process-flow__node.is-hovered svg {
-  stroke: #ffffff;
-  fill: none;
-}
-
-/* Final node — matches other nodes at rest, green on hover */
+/* Final node — same style, slightly larger */
 .process-flow__node--filled {
   width: 58px;
   height: 58px;
-  background: #ffffff;
-  border-color: var(--green);
-  box-shadow: none;
 }
 
 .process-flow__node--filled svg {
   width: 23px;
   height: 23px;
-  stroke: var(--green);
 }
 
 .process-flow__node--filled:hover,
 .process-flow__node--filled.is-hovered {
-  background: var(--green);
-  border-color: var(--green);
   transform: scale(1.15);
   box-shadow: 0 6px 28px rgba(31, 122, 92, 0.45);
-}
-
-.process-flow__node--filled:hover svg,
-.process-flow__node--filled.is-hovered svg {
-  stroke: #ffffff;
-  fill: none;
 }
 
 /* Line spacers — invisible; spine is the visual line */
