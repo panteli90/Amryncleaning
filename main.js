@@ -2,6 +2,14 @@
 // AMRYN CLEANING SERVICES — Main JS
 // =============================================
 
+// --- Sticky Nav on Scroll ---
+const nav = document.querySelector('.nav');
+if (nav) {
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+  }, { passive: true });
+}
+
 // --- Mobile Nav ---
 const hamburger = document.querySelector('.nav__hamburger');
 const mobileNav = document.querySelector('.nav__mobile');

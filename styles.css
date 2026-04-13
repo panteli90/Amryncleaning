@@ -158,11 +158,25 @@ p  { color: var(--gray-600); }
    ============================================= */
 
 .nav {
-  position: sticky;
+  position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 100;
-  background: var(--white);
-  border-bottom: 1px solid var(--gray-200);
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 14px 0;
+  transition: background 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav--scrolled {
+  position: fixed;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 
 .nav__inner {
@@ -176,15 +190,18 @@ p  { color: var(--gray-600); }
 }
 
 .nav__logo {
-  font-size: 1.1rem;
-  font-weight: 900;
+  font-size: 15px;
+  font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--black);
+  color: #ffffff;
   text-transform: uppercase;
 }
 
 .nav__logo span {
-  color: var(--gray-400);
+  color: #1D9E75;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  font-size: 13px;
 }
 
 .nav__links {
@@ -196,25 +213,29 @@ p  { color: var(--gray-600); }
 .nav__links a {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--gray-800);
+  color: rgba(255,255,255,0.8);
   transition: color var(--transition);
 }
 
 .nav__links a:hover,
 .nav__links a.active {
-  color: var(--black);
+  color: #ffffff;
 }
 
 .nav__cta {
-  background: var(--black);
-  color: var(--white) !important;
+  background: #1D9E75;
+  color: #ffffff !important;
   padding: 10px 20px;
-  border-radius: var(--radius);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  transition: background 0.2s ease;
 }
 
 .nav__cta:hover {
-  background: #333 !important;
-  color: var(--white) !important;
+  background: #166d52 !important;
+  color: #ffffff !important;
 }
 
 /* Hamburger */
@@ -272,6 +293,7 @@ p  { color: var(--gray-600); }
   width: 100vw;
   max-width: 100vw;
   margin: 0;
+  padding-top: 80px;
   padding-left: 0;
   padding-right: 0;
   display: flex;
@@ -1130,7 +1152,7 @@ p  { color: var(--gray-600); }
 
 .page-hero {
   background: var(--black);
-  padding: 80px 24px;
+  padding: 140px 24px 80px;
   text-align: center;
 }
 
