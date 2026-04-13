@@ -597,28 +597,6 @@ p  { color: var(--gray-600); }
   height: 100%;
 }
 
-/* Animated spine — drawn top→bottom on scroll */
-.process-flow__spine {
-  position: absolute;
-  top: 26px;
-  bottom: 26px;
-  left: 50%;
-  width: 2px;
-  background: linear-gradient(
-    to bottom,
-    var(--green) 0%,
-    var(--green) 70%,
-    rgba(31, 122, 92, 0.2) 100%
-  );
-  transform: translateX(-50%) scaleY(0);
-  transform-origin: top center;
-  transition: transform 1s ease-out;
-  z-index: 0;
-}
-
-.our-process.is-visible .process-flow__spine {
-  transform: translateX(-50%) scaleY(1);
-}
 
 /* Nodes */
 .process-flow__node {

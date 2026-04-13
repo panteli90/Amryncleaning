@@ -42,19 +42,7 @@ if (processSection) {
   const flowNodes = processSection.querySelectorAll('.process-flow__node');
   const stepCards = processSection.querySelectorAll('.process-item');
 
-  // 1. Spine draw animation on scroll into view
-  const spineObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        spineObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.25 });
-
-  spineObserver.observe(processSection);
-
-  // 2. Icon activation as each step scrolls into view
+  // 1. Icon activation as each step scrolls into view
   const stepObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
