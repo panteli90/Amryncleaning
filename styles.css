@@ -646,23 +646,29 @@ p  { color: var(--gray-600); }
   padding: 32px 24px;
   border: 1px solid var(--gray-200);
   border-radius: 6px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .why-item:hover {
-  border-color: var(--black);
-  box-shadow: 0 0 0 1px var(--black);
+  border-color: rgba(29,158,117,0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .why-item__icon {
   width: 44px;
   height: 44px;
-  background: var(--black);
+  background: #1D9E75;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  transition: background 0.2s;
+}
+
+.why-item:hover .why-item__icon {
+  background: #166d52;
 }
 
 .why-item__icon svg {
