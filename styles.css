@@ -290,7 +290,7 @@ p  { color: var(--gray-600); }
   object-position: center top;
   display: block;
   z-index: 0;
-  filter: brightness(1.1);
+  filter: brightness(1.6);
   transform: scale(1.05);
   transform-origin: center top;
 }
@@ -303,9 +303,9 @@ p  { color: var(--gray-600); }
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(0,0,0,0.45),
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.1)
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0)
   );
   z-index: 1;
 }
