@@ -270,7 +270,7 @@ p  { color: var(--gray-600); }
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -309,9 +309,13 @@ p  { color: var(--gray-600); }
 .hero__content {
   position: relative;
   z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 120px 24px 180px;
+  padding: 100px 24px 48px;
   color: var(--white);
   width: 100%;
 }
@@ -324,29 +328,29 @@ p  { color: var(--gray-600); }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--green);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   animation: heroFadeUp 0.6s ease-out 0.1s both;
 }
 
 /* Headline */
 .hero__title {
-  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   font-weight: 900;
   letter-spacing: -0.03em;
-  line-height: 1.08;
+  line-height: 1.1;
   max-width: 760px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   color: #ffffff;
   animation: heroFadeUp 0.7s ease-out 0.22s both;
 }
 
 /* Subtext */
 .hero__sub {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: rgba(255,255,255,0.65);
   max-width: 540px;
-  margin-bottom: 40px;
-  line-height: 1.78;
+  margin-bottom: 32px;
+  line-height: 1.75;
   animation: heroFadeUp 0.7s ease-out 0.36s both;
 }
 
@@ -355,7 +359,7 @@ p  { color: var(--gray-600); }
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   animation: heroFadeUp 0.7s ease-out 0.5s both;
 }
 
@@ -427,16 +431,14 @@ p  { color: var(--gray-600); }
 
 /* Stats strip — pinned to bottom of hero */
 .hero__stats-strip {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 2;
   border-top: 1px solid rgba(255,255,255,0.1);
   background: rgba(0,0,0,0.35);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   animation: heroFadeUp 0.7s ease-out 0.6s both;
+  flex-shrink: 0;
 }
 
 .hero__stats-inner {
@@ -1445,7 +1447,7 @@ p  { color: var(--gray-600); }
 
 @media (max-width: 768px) {
   .hero__content {
-    padding: 100px 20px 140px;
+    padding: 80px 20px 36px;
   }
 
   .hero__trust {
