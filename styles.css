@@ -863,7 +863,7 @@ p  { color: var(--gray-600); }
   left: calc(16.66% + 16px);
   right: calc(16.66% + 16px);
   height: 1px;
-  background: var(--gray-200);
+  background: rgba(29,158,117,0.4);
 }
 
 .process-step {
@@ -875,7 +875,7 @@ p  { color: var(--gray-600); }
 .process-step__number {
   width: 64px;
   height: 64px;
-  background: var(--black);
+  background: #1D9E75;
   color: var(--white);
   font-size: 1.25rem;
   font-weight: 900;
@@ -886,6 +886,11 @@ p  { color: var(--gray-600); }
   margin: 0 auto 24px;
   position: relative;
   z-index: 1;
+  transition: background 0.2s;
+}
+
+.process-step:hover .process-step__number {
+  background: #166d52;
 }
 
 .process-step h3 {
