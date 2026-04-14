@@ -1433,7 +1433,7 @@ p  { color: var(--gray-600); }
 }
 
 .footer__logo span {
-  color: rgba(255,255,255,0.35);
+  color: #1D9E75;
 }
 
 .footer__col h4 {
