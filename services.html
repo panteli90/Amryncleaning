@@ -11,9 +11,32 @@
 
     /* ── Page Hero ── */
     .sp-hero {
-      background: #111827;
-      padding: 140px 24px 80px;
+      position: relative;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      overflow: hidden;
+    }
+    .sp-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/cleaning-team.png') center/cover no-repeat;
+      z-index: 0;
+    }
+    .sp-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(8,18,10,0.85), rgba(8,18,10,0.95));
+      z-index: 1;
+    }
+    .sp-hero__inner {
+      position: relative;
+      z-index: 2;
+      padding-top: 68px;
     }
     .sp-hero__label {
       display: inline-block;
@@ -22,7 +45,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #1D9E75;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
     .sp-hero h1 {
       font-size: 40px;
@@ -30,7 +53,7 @@
       color: #ffffff;
       letter-spacing: -0.02em;
       line-height: 1.15;
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
     .sp-hero p {
       color: rgba(255,255,255,0.6);
@@ -214,9 +237,11 @@
 
   <!-- PAGE HERO -->
   <section class="sp-hero">
-    <span class="sp-hero__label">What We Offer</span>
-    <h1>Commercial Cleaning Services</h1>
-    <p>From daily office cleans to large-scale commercial contracts — we cover it all with a consistent, professional approach.</p>
+    <div class="sp-hero__inner">
+      <span class="sp-hero__label">What We Offer</span>
+      <h1>Commercial Cleaning Services</h1>
+      <p>From daily office cleans to large-scale commercial contracts — we cover it all with a consistent, professional approach.</p>
+    </div>
   </section>
 
   <!-- ============================

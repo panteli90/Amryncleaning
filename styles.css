@@ -1216,14 +1216,40 @@ p  { color: var(--gray-600); }
    ============================================= */
 
 .page-hero {
-  background: var(--black);
-  padding: 140px 24px 80px;
+  position: relative;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('images/cleaning-team.png') center/cover no-repeat;
+  z-index: 0;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(8,18,10,0.85), rgba(8,18,10,0.95));
+  z-index: 1;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 2;
+  padding-top: 68px;
 }
 
 .page-hero h1 {
-  color: var(--white);
-  margin-bottom: 16px;
+  color: #ffffff;
+  margin-bottom: 12px;
 }
 
 .page-hero p {
