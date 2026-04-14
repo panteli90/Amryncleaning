@@ -509,12 +509,12 @@ p  { color: var(--gray-600); }
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #4ade80;
+  color: #1d6b4f;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.02em;
-  background: rgba(74,222,128,0.10);
-  border: 1px solid rgba(74,222,128,0.32);
+  background: rgba(29,107,79,0.15);
+  border: 1px solid rgba(29,107,79,0.45);
   border-radius: 999px;
   padding: 7px 16px;
   transition: background 0.2s, border-color 0.2s;
@@ -522,15 +522,15 @@ p  { color: var(--gray-600); }
 }
 
 .hero__trust-item:hover {
-  background: rgba(74,222,128,0.18);
-  border-color: rgba(74,222,128,0.55);
+  background: rgba(29,107,79,0.25);
+  border-color: rgba(29,107,79,0.65);
 }
 
 .hero__trust-item svg {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
-  stroke: #4ade80;
+  stroke: #1d6b4f;
 }
 
 /* Stats strip — pinned to bottom of hero */
