@@ -1216,7 +1216,7 @@ p  { color: var(--gray-600); }
    ============================================= */
 
 .page-hero {
-  min-height: 100vh;
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1240,8 +1240,11 @@ p  { color: var(--gray-600); }
 }
 
 .page-hero h1 {
+  font-size: 40px;
   color: #ffffff;
   font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
   margin-bottom: 12px;
 }
 
