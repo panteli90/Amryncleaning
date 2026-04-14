@@ -509,12 +509,12 @@ p  { color: var(--gray-600); }
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #378569;
+  color: #ffffff;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.02em;
   background: rgba(0,0,0,0.45);
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid #1d6b4f;
   border-radius: 999px;
   padding: 7px 16px;
   backdrop-filter: blur(8px);
@@ -525,14 +525,14 @@ p  { color: var(--gray-600); }
 
 .hero__trust-item:hover {
   background: rgba(0,0,0,0.6);
-  border-color: rgba(255,255,255,0.75);
+  border-color: #1D9E75;
 }
 
 .hero__trust-item svg {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
-  stroke: #378569;
+  stroke: #1D9E75;
 }
 
 /* Stats strip — pinned to bottom of hero */
