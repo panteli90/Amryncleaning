@@ -1230,9 +1230,9 @@ p  { color: var(--gray-600); }
 
 .page-hero .page-hero__eyebrow {
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #4ade80;
   margin-bottom: 14px;
@@ -1240,6 +1240,7 @@ p  { color: var(--gray-600); }
 
 .page-hero h1 {
   color: #ffffff;
+  font-weight: 800;
   margin-bottom: 12px;
 }
 
