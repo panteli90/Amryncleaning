@@ -237,37 +237,37 @@
         <h2>Get a Free Quote</h2>
         <p>No obligation. No sales calls. Just a clear price sent directly to your inbox.</p>
 
-        <form class="form" method="POST" action="https://formspree.io/f/xqegrrvd">
+        <form class="form" method="POST" action="https://formspree.io/f/mzdybloa">
           <div class="form-row">
             <div class="form-group">
               <label for="first_name">First Name *</label>
-              <input type="text" id="first_name" placeholder="John" required />
+              <input type="text" id="first_name" name="first_name" placeholder="John" required />
             </div>
             <div class="form-group">
               <label for="last_name">Last Name *</label>
-              <input type="text" id="last_name" placeholder="Smith" required />
+              <input type="text" id="last_name" name="last_name" placeholder="Smith" required />
             </div>
           </div>
 
           <div class="form-group">
             <label for="company_name">Company Name</label>
-            <input type="text" id="company_name" placeholder="Your Business Inc." />
+            <input type="text" id="company_name" name="company_name" placeholder="Your Business Inc." />
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="email_addr">Email Address *</label>
-              <input type="email" id="email_addr" placeholder="john@business.com" required />
+              <input type="email" id="email_addr" name="email" placeholder="john@business.com" required />
             </div>
             <div class="form-group">
               <label for="phone_num">Phone Number</label>
-              <input type="tel" id="phone_num" placeholder="e.g. (403) 471-3090" />
+              <input type="tel" id="phone_num" name="phone" placeholder="e.g. (403) 471-3090" />
             </div>
           </div>
 
           <div class="form-group">
             <label for="service_type">Service Required *</label>
-            <select id="service_type" required>
+            <select id="service_type" name="service_type" required>
               <option value="">Select a service...</option>
               <option>Office Cleaning</option>
               <option>Retail / Commercial Cleaning</option>
@@ -281,7 +281,7 @@
 
           <div class="form-group">
             <label for="site_size">Approximate Site Size</label>
-            <select id="site_size">
+            <select id="site_size" name="site_size">
               <option value="">Select size...</option>
               <option>Under 500 sq ft</option>
               <option>500 – 2,000 sq ft</option>
@@ -294,7 +294,7 @@
 
           <div class="form-group">
             <label for="frequency">Cleaning Frequency</label>
-            <select id="frequency">
+            <select id="frequency" name="frequency">
               <option value="">Select frequency...</option>
               <option>Daily</option>
               <option>Weekdays only</option>
@@ -308,7 +308,7 @@
 
           <div class="form-group">
             <label for="details">Tell us more about your requirements</label>
-            <textarea id="details" placeholder="Describe the site, any specific requirements, preferred times, or anything else useful..."></textarea>
+            <textarea id="details" name="message" placeholder="Describe the site, any specific requirements, preferred times, or anything else useful..."></textarea>
           </div>
 
           <div class="form-submit">
