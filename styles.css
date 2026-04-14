@@ -509,30 +509,30 @@ p  { color: var(--gray-600); }
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #1d6b4f;
+  color: #ffffff;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.02em;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.5);
   border-radius: 999px;
   padding: 7px 16px;
-  backdrop-filter: blur(0.5px);
-  -webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: background 0.2s, border-color 0.2s;
   cursor: default;
 }
 
 .hero__trust-item:hover {
-  background: rgba(255,255,255,0.14);
-  border-color: rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.6);
+  border-color: rgba(255,255,255,0.75);
 }
 
 .hero__trust-item svg {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
-  stroke: #1d6b4f;
+  stroke: #ffffff;
 }
 
 /* Stats strip — pinned to bottom of hero */
