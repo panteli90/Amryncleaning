@@ -509,7 +509,7 @@ p  { color: var(--gray-600); }
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #ffffff;
+  color: #1d6b4f;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -532,7 +532,7 @@ p  { color: var(--gray-600); }
   width: 14px;
   height: 14px;
   flex-shrink: 0;
-  stroke: #ffffff;
+  stroke: #1d6b4f;
 }
 
 /* Stats strip — pinned to bottom of hero */
